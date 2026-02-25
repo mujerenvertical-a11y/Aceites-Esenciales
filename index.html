@@ -8,8 +8,8 @@
         /* Estilo Minimalista Personalizado */
         body {
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #DFD2BA; /* Fondo solicitado */
-            color: #491139; /* Color de letra solicitado */
+            background-color: #DFD2BA; 
+            color: #491139; 
             margin: 0;
             display: flex;
             flex-direction: column;
@@ -17,19 +17,27 @@
             padding: 40px 20px;
         }
 
-        h1 {
+        h1, .mensaje-ayuda {
             font-weight: 300;
             color: #491139; 
             letter-spacing: 1px;
-            margin-bottom: 10px;
             text-align: center;
+            margin: 0;
+        }
+
+        h1 { margin-bottom: 10px; }
+
+        .mensaje-ayuda {
+            font-size: 1.5rem; /* Tamaño similar al título */
+            margin-bottom: 40px;
+            margin-top: 10px;
         }
 
         p.subtitle {
             font-size: 0.9rem;
             color: #491139;
             opacity: 0.8;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
 
         .container {
@@ -38,16 +46,17 @@
             gap: 20px;
             width: 100%;
             max-width: 1100px;
+            margin-bottom: 60px;
         }
 
         /* Estilo de las Tarjetas */
         .pais-card {
             background: #fff;
-            border: 1px solid #491139; /* Contorno solicitado */
+            border: 1px solid #491139; 
             padding: 30px 15px;
             text-align: center;
             text-decoration: none;
-            color: #491139; /* Letra solicitada */
+            color: #491139; 
             border-radius: 12px;
             transition: all 0.3s ease;
             display: flex;
@@ -67,6 +76,33 @@
             font-weight: 500;
         }
 
+        /* Sección de Botones Inferiores */
+        .botones-contacto {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1100px;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        .btn-link {
+            text-decoration: none;
+            color: #fff;
+            background-color: #491139;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: opacity 0.3s;
+            text-align: center;
+            flex: 1; /* Para que crezcan igual */
+            max-width: 250px;
+        }
+
+        .btn-link:hover {
+            opacity: 0.9;
+        }
+
         /* Pie de página */
         footer {
             margin-top: 60px;
@@ -75,21 +111,20 @@
             border-top: 1px solid #491139;
             width: 100%;
             max-width: 600px;
-        }
-
-        footer a {
-            color: #491139;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
+            font-size: 0.9rem;
         }
 
         @media (max-width: 600px) {
             .container {
                 grid-template-columns: 1fr 1fr;
+            }
+            .botones-contacto {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn-link {
+                width: 80%;
+                max-width: none;
             }
         }
     </style>
@@ -98,79 +133,36 @@
 
     <h1>Promoción Mensual doTERRA</h1>
     <p class="subtitle">Selecciona tu mercado para ver las ofertas actuales</p>
+    
+    <div class="mensaje-ayuda">¿Necesitas ayuda para obtener alguna de estas ofertas?</div>
 
     <div class="container">
-        
-        <a href="https://www.doterra.com/US/en/promotions" target="_blank" class="pais-card">
-            <span>Estados Unidos</span>
-        </a>
+        <a href="https://www.doterra.com/US/en/promotions" target="_blank" class="pais-card"><span>Estados Unidos</span></a>
+        <a href="https://www.doterra.com/AU/en_AU/promotions" target="_blank" class="pais-card"><span>Australia</span></a>
+        <a href="https://www.doterra.com/BR/pt_BR/current-promotions" target="_blank" class="pais-card"><span>Brazil</span></a>
+        <a href="https://www.doterra.com/CA/en/promotions" target="_blank" class="pais-card"><span>Canadá</span></a>
+        <a href="https://www.doterra.com/CO/es_CO/current-promotions" target="_blank" class="pais-card"><span>Colombia</span></a>
+        <a href="https://www.doterra.com/CL/es_CL/current-promotions" target="_blank" class="pais-card"><span>Chile</span></a>
+        <a href="https://www.doterra.com/CR/es_CR/current-promotions" target="_blank" class="pais-card"><span>Costa Rica</span></a>
+        <a href="https://www.doterra.com/EC/es_EC/current-promotions" target="_blank" class="pais-card"><span>Ecuador</span></a>
+        <a href="https://www.doterra.com/SV/es_SV/current-promotions" target="_blank" class="pais-card"><span>El Salvador</span></a>
+        <a href="https://www.doterra.com/ME/es_ME/promotions-monthly-promo" target="_blank" class="pais-card"><span>Europa</span></a>
+        <a href="https://www.doterra.com/GT/es_GT" target="_blank" class="pais-card"><span>Guatemala</span></a>
+        <a href="https://www.doterra.com/IN/en_IN/promotions" target="_blank" class="pais-card"><span>India</span></a>
+        <a href="https://www.doterra.com/MX/es_MX/current-promotions" target="_blank" class="pais-card"><span>México</span></a>
+        <a href="https://www.doterra.com/NZ/en_NZ/promotions" target="_blank" class="pais-card"><span>Nueva Zelanda</span></a>
+        <a href="https://www.doterra.com/ZA/en_ZA/current-promotions" target="_blank" class="pais-card"><span>Sur África</span></a>
+        <a href="https://www.doterra.com/US/en/promotions" target="_blank" class="pais-card"><span>GAC</span></a>
+    </div>
 
-        <a href="https://www.doterra.com/AU/en_AU/promotions" target="_blank" class="pais-card">
-            <span>Australia</span>
-        </a>
-
-        <a href="https://www.doterra.com/BR/pt_BR/current-promotions" target="_blank" class="pais-card">
-            <span>Brazil</span>
-        </a>
-
-        <a href="https://www.doterra.com/CA/en/promotions" target="_blank" class="pais-card">
-            <span>Canadá</span>
-        </a>
-
-        <a href="https://www.doterra.com/CO/es_CO/current-promotions" target="_blank" class="pais-card">
-            <span>Colombia</span>
-        </a>
-
-        <a href="https://www.doterra.com/CL/es_CL/current-promotions" target="_blank" class="pais-card">
-            <span>Chile</span>
-        </a>
-
-        <a href="https://www.doterra.com/CR/es_CR/current-promotions" target="_blank" class="pais-card">
-            <span>Costa Rica</span>
-        </a>
-
-        <a href="https://www.doterra.com/EC/es_EC/current-promotions" target="_blank" class="pais-card">
-            <span>Ecuador</span>
-        </a>
-
-        <a href="https://www.doterra.com/SV/es_SV/current-promotions" target="_blank" class="pais-card">
-            <span>El Salvador</span>
-        </a>
-
-        <a href="https://www.doterra.com/ME/es_ME/promotions-monthly-promo" target="_blank" class="pais-card">
-            <span>Europa</span>
-        </a>
-
-        <a href="https://www.doterra.com/GT/es_GT" target="_blank" class="pais-card">
-            <span>Guatemala</span>
-        </a>
-
-        <a href="https://www.doterra.com/IN/en_IN/promotions" target="_blank" class="pais-card">
-            <span>India</span>
-        </a>
-
-        <a href="https://www.doterra.com/MX/es_MX/current-promotions" target="_blank" class="pais-card">
-            <span>México</span>
-        </a>
-
-        <a href="https://www.doterra.com/NZ/en_NZ/promotions" target="_blank" class="pais-card">
-            <span>Nueva Zelanda</span>
-        </a>
-
-        <a href="https://www.doterra.com/ZA/en_ZA/current-promotions" target="_blank" class="pais-card">
-            <span>Sur África</span>
-        </a>
-
-        <a href="https://www.doterra.com/US/en/promotions" target="_blank" class="pais-card">
-            <span>GAC</span>
-        </a>
-
+    <div class="botones-contacto">
+        <a href="https://wa.link/w75blk" target="_blank" class="btn-link">Escríbeme aquí</a>
+        <a href="https://www.instagram.com/mujerenvertical/" target="_blank" class="btn-link">@mujerenvertical</a>
     </div>
 
     <footer>
-        Hecho por <a href="https://www.instagram.com/mujerenvertical/" target="_blank">Anasofia Rojas @mujerenvertical</a>
+        Hecho por Anasofia Rojas
     </footer>
 
 </body>
-
 </html>
