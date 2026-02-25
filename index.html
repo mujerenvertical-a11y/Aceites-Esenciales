@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promoción Mensual doTERRA</title>
+    <title>Promoción Mensual dōTERRA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Estilo Minimalista Personalizado */
         body {
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #DFD2BA; 
+            background-color: #F0DBA5; 
             color: #491139; 
             margin: 0;
             display: flex;
@@ -17,124 +17,110 @@
             padding: 40px 20px;
         }
 
-        h1, .mensaje-ayuda {
+        h1 {
             font-weight: 300;
-            color: #491139; 
             letter-spacing: 1px;
+            margin-bottom: 5px;
             text-align: center;
-            margin: 0;
         }
 
-        h1 { margin-bottom: 10px; }
-
         .mensaje-ayuda {
-            font-size: 1.5rem; /* Tamaño similar al título */
-            margin-bottom: 40px;
-            margin-top: 10px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-align: center;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            margin-top: 40px;
         }
 
         p.subtitle {
             font-size: 0.9rem;
-            color: #491139;
             opacity: 0.8;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
 
         .container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
             width: 100%;
-            max-width: 1100px;
-            margin-bottom: 60px;
+            max-width: 900px;
         }
 
-        /* Estilo de las Tarjetas */
         .pais-card {
             background: #fff;
             border: 1px solid #491139; 
-            padding: 30px 15px;
+            padding: 20px 10px;
             text-align: center;
             text-decoration: none;
             color: #491139; 
             border-radius: 12px;
             transition: all 0.3s ease;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
         }
 
         .pais-card:hover {
-            background-color: #f5f0e8;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(73, 17, 57, 0.1);
+            background-color: #fcf6e8;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(73, 17, 57, 0.1);
         }
 
         .pais-card span {
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             font-weight: 500;
         }
 
-        /* Sección de Botones Inferiores */
         .botones-contacto {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             width: 100%;
-            max-width: 1100px;
-            margin-top: 20px;
-            gap: 20px;
+            gap: 12px;
         }
 
         .btn-link {
             text-decoration: none;
             color: #fff;
             background-color: #491139;
-            padding: 12px 25px;
+            padding: 12px 18px;
             border-radius: 8px;
             font-weight: 600;
-            transition: opacity 0.3s;
+            transition: all 0.3s;
             text-align: center;
-            flex: 1; /* Para que crezcan igual */
-            max-width: 250px;
+            min-width: 150px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px; /* Espacio entre icono y texto */
         }
 
         .btn-link:hover {
-            opacity: 0.9;
+            opacity: 0.8;
+            transform: scale(1.02);
         }
 
-        /* Pie de página */
         footer {
             margin-top: 60px;
             padding: 20px;
             text-align: center;
-            border-top: 1px solid #491139;
+            border-top: 1px solid rgba(73, 17, 57, 0.2);
             width: 100%;
-            max-width: 600px;
-            font-size: 0.9rem;
+            max-width: 400px;
+            font-size: 0.85rem;
         }
 
         @media (max-width: 600px) {
-            .container {
-                grid-template-columns: 1fr 1fr;
-            }
-            .botones-contacto {
-                flex-direction: column;
-                align-items: center;
-            }
-            .btn-link {
-                width: 80%;
-                max-width: none;
-            }
+            .container { grid-template-columns: 1fr 1fr; }
+            .btn-link { flex: 1; min-width: 130px; padding: 10px; }
         }
     </style>
 </head>
 <body>
 
-    <h1>Promoción Mensual doTERRA</h1>
+    <h1>Promoción Mensual dōTERRA</h1>
     <p class="subtitle">Selecciona tu mercado para ver las ofertas actuales</p>
-    
-    <div class="mensaje-ayuda">¿Necesitas ayuda para obtener alguna de estas ofertas?</div>
 
     <div class="container">
         <a href="https://www.doterra.com/US/en/promotions" target="_blank" class="pais-card"><span>Estados Unidos</span></a>
@@ -151,17 +137,23 @@
         <a href="https://www.doterra.com/IN/en_IN/promotions" target="_blank" class="pais-card"><span>India</span></a>
         <a href="https://www.doterra.com/MX/es_MX/current-promotions" target="_blank" class="pais-card"><span>México</span></a>
         <a href="https://www.doterra.com/NZ/en_NZ/promotions" target="_blank" class="pais-card"><span>Nueva Zelanda</span></a>
-        <a href="https://www.doterra.com/ZA/en_ZA/current-promotions" target="_blank" class="pais-card"><span>Sur África</span></a>
+        <a href="https://www.doterra.com/ZA/en_ZA/current-promotions" target="_blank" class="pais-card"><span>Sudáfrica</span></a>
         <a href="https://www.doterra.com/US/en/promotions" target="_blank" class="pais-card"><span>GAC</span></a>
     </div>
 
+    <div class="mensaje-ayuda">¿Necesitas ayuda para obtener alguna de estas ofertas?</div>
+
     <div class="botones-contacto">
-        <a href="https://wa.link/w75blk" target="_blank" class="btn-link">Escríbeme aquí</a>
-        <a href="https://www.instagram.com/mujerenvertical/" target="_blank" class="btn-link">@mujerenvertical</a>
+        <a href="https://wa.link/w75blk" target="_blank" class="btn-link">
+            <i class="fab fa-whatsapp"></i> Escríbeme aquí
+        </a>
+        <a href="https://www.instagram.com/mujerenvertical/" target="_blank" class="btn-link">
+            <i class="fab fa-instagram"></i> @mujerenvertical
+        </a>
     </div>
 
     <footer>
-        Hecho por Anasofia Rojas
+        Hecho por Anasofia Rojas @mujerenvertical
     </footer>
 
 </body>
